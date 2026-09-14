@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="varianteBac/varianteBac.vcxproj" Id="9e4b10d1-4b43-4805-8f43-0afb7d92ace0" />
+</Solution>
