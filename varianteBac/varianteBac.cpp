@@ -1,9 +1,9 @@
 #include <iostream>
-#include "varianta20.h"
+#include "varianta3.h"
 using namespace std;
 
 int main() {
 
-	solutie3();
+	solutie4();
 
 }

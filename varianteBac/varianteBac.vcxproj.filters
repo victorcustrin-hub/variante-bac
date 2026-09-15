@@ -50,5 +50,17 @@
     <ClInclude Include="varianta20.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="varianta24.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="varianta5.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="varianta3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="varianta39.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
