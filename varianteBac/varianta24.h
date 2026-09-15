@@ -15,12 +15,12 @@ using namespace std;
 //     intermediul parametrului maxi valoarea maximă din x, iar prin intermediul parametrului sum
 //     suma elementelor din tabloul x
 
-void p(int x[], int n,int mini,int maxi,int sum) {
+void p(int x[], int n,int &mini,int &maxi,int &sum) {
     mini = x[0];
     maxi = x[0];
     sum = x[0];
 
-    for (int i = i;i < n;i++) {
+    for (int i = 1;i < n;i++) {
 		if (x[i] < mini) {
 			mini = x[i];
 		}
@@ -42,18 +42,37 @@ void p(int x[], int n,int mini,int maxi,int sum) {
 //maximă din tablou.Valoarea afişată va avea cel mult 3 cifre după virgulă.
 //Exemplu: dacă se citesc pentru n valoarea 5, iar pentru tabloul x valorile(1, 9, 4, 8, 5),
 //programul va afişa una dintre valorile 5.667 sau 5.666.
-void solutie2b() {
-    int n = 0;
-    int x[100];
-    int mini, maxi, sum;
 
-    cin >> n;
-    for (int i = 0; i < n; i++) {
-        cin >> x[i];
+//functie de stergere 
+void stergere(int x[], int& dim, int poz) {
+
+    for (int i = poz;i < dim;i++) {
+        x[i] = x[i + 1];
     }
+    dim--;
+}
+
+void solutie2b() {
+    int n = 5;
+    int x[100] = {1,9,4,8,5};
+    int mini=100, maxi=0, sum=0;
+    int ct = 1;
 
     p(x, n, mini, maxi, sum);
 
-    int suma_ramasa = sum - mini - maxi;
-    int elemente_ramase = n - 2;
+    for (int i = 0;i < n;i++) {
+        if (mini == x[i] || maxi == x[i]) {
+            stergere(x, n, i);
+            i--;
+        }
+
+    }
+    mini = 100;
+    maxi = 0;
+    sum = 0;
+
+    p(x, n, mini, maxi, sum);
+    double medie = (double) sum / n;
+    
+    cout << mini << ", " << maxi<<" ," << medie<<endl;
 }
