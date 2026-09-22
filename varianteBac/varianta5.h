@@ -14,6 +14,7 @@ using namespace std;
 //deoarece a = 32
 //* 5, iar cel mai mic divizor prim al său este 3.
 //a) Scrieţi definiţia completă a subprogramului f. (4p.)
+
 //b) Scrieţi un program C / C++ care să citească de la tastatură un număr natural nenul n
 //(n≤100) şi apoi un şir de n numere naturale de cel mult 8 cifre fiecare, toate numerele din
 //şir fiind strict mai mari decât 1. Folosind apeluri utile ale subprogramului f, programul va
@@ -43,12 +44,15 @@ void solutie4() {
 
     for (int i = 0; i < n; i++) {
         cin >> x;
+        if (f(x) == x) {
+            prime[ct_prime] = x;
+            ct_prime++;
+        }
     }
 
     if (ct_prime == 0) {
         cout << "nu exista numere prime";
-    }
-    else {
+    }else {
         for (int i = 0; i < ct_prime - 1; i++) {
             for (int j = i + 1; j < ct_prime; j++) {
                 if (prime[i] > prime[j]) {

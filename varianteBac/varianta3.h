@@ -56,10 +56,7 @@ void numarPalindrom(int nr) {
         //0 1 2 3 4 5 6 7 8 9
         //2 0 2 0 0 2 0 0 2 0
         //85200258
-        for (int i = 9;i >= 0;i--) {
-            //de terminat 
-
-        }
+        
     }
 }
 

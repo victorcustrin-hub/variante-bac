@@ -12,7 +12,7 @@ using namespace std;
 //spaţiu, fiecare număr fiind format din cel mult 4 cifre.Scrieţi un program C / C++ care
 //citeşte valorile din fişier şi care afişează pe ecran mesajul DA dacă toate elementele pare
 //din şir sunt în ordine crescătoare şi mesajul NU în caz contrar
-int solutie3() {
+void solutie3() {
     int n = 0;
     int x = 0;
     int ultimul_par = -1;
