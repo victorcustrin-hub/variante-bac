@@ -18,6 +18,9 @@ using namespace std;
 
 
 int ordin(int nr) {
+    if (nr == 0) {
+        return 10;
+    }
     int p = 1;
     while (nr != 0) {
         p = p * 10;

@@ -3,7 +3,7 @@
 #include <cmath>
 using namespace std;
 
-//??
+//?? incomplet
 
 //SUBIECTUL III
 
@@ -23,44 +23,7 @@ using namespace std;
 //Exemplu: dacă n = 21523531 atunci se va afişa pe ecran numărul 53211235, iar dacă
 //n = 12272351 atunci se va afişa pe ecran numărul 0.
 
-
-//vector frecventa
-void frecventaCif(int f[],int nr) {
-    
-    while (nr != 0) {
-        int cif = nr % 10;
-        f[cif]++;
-        nr = nr / 10;
-    }
-  
-}
-
-//functie ce verifica daca putem forma un numar palindrom
-bool verificareaFormariiPalindrom(int f[]) {
-  
-    for (int i = 0;i < 10;i++) {
-        if (f[i] % 2 != 0) {
-            return false;
-        }
-    }
-    return true;
-
-}
-
-//functie ce creeaza un numar palindrom din cifrele altui numar
-void numarPalindrom(int nr) {
-    int f[10] = {};
-    frecventaCif(f, nr);
-    if (verificareaFormariiPalindrom(f)) {
-        int nou = 0;
-        //0 1 2 3 4 5 6 7 8 9
-        //2 0 2 0 0 2 0 0 2 0
-        //85200258
-        
-    }
-}
-
-int cif(long a, int b) {
+int cif(int a, int b) {
     int ct = 0;
 
     if (a == 0 && b == 0) {
@@ -77,8 +40,35 @@ int cif(long a, int b) {
     return ct;
 }
 
-void solutie4() {
-    long n = 38517452;
-    int f[10]{};
+//n=21523531
+//i<=9           0  1  2  3  4  5  6  7  8  9
+//9<=9 da        0      
+//1<=9 da           2
+//2<=9 da              2
+//3<=9 da                 2
+//4<=9 da                    0
+//5<=9 da                       2
+//6<=9 da                          0
+//7<=9 da                             0
+//8<=9 da                                0
+//9<=9 da                                   0
+//10<=9 nu
 
+//i>=0
+void solutie() {
+    int n = 21523531;
+    int fr[10];
+    int cif_impare = 0;
+
+    for (int i = 0; i <= 9; i++) {
+        fr[i] = cif(n, i);
+        if (fr[i] % 2 != 0) {
+            cif_impare++;
+        }
+    }
+
+    if (cif_impare > 0) {
+        cout << 0 << endl;
+    }
+    //incomplet
 }

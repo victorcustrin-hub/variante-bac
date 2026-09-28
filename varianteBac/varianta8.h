@@ -3,7 +3,7 @@
 #include <cmath>
 using namespace std;
 
-//??
+//de revazut
 
 //SUBIECTUL III
 
@@ -15,19 +15,6 @@ using namespace std;
 //Subprogramul va afişa pe ecran, în ordine crescătoare, separate prin câte un spaţiu, un şir
 //format dintr - un număr maxim de elemente care aparţin cel puţin unuia dintre tablouri, astfel
 //încât orice două elemente aflate pe poziţii consecutive să fie de paritate diferită.
-
-
-void sub(int n, int m, int a[], int b[]) {
-	int j = 0;
-
-	int paritate = -1;
-	int i = 0;
-
-
-
-	cout << endl;
-}
-//functie de sortare
 
 void sortare(int v[], int dim) {
 	bool sortat = true;
@@ -45,7 +32,6 @@ void sortare(int v[], int dim) {
 	} while (sortat == false);
 
 }
-
 
 //functie de interclasare a doi vectori soratati 
 // a={12,24,26,28,34}      b={3,9,13,21,27,39,53}
@@ -65,29 +51,15 @@ void sortare(int v[], int dim) {
 //  4<5,5<7             34<39 adev                                            34  
 //  5<5 fals    
 
-
-
-// a={2,4,8,10,14}      b={3,5,11}
-// c[0]=2, i=1, dimC=1 (pana la primul while)
-
-//                                            0  1  2  3  4  5  6  7  8  9   10  11       i   j       dimcC
-//                                            0  0  0  0  0  0  0  0  0  0   0   0                                  
-//  i<dimA && j<dimB                          2          
-//  1<5&&0<3 ADEVARAT                            3                                        1   0         2
-//  1<5&&0<3 ADEVARAT                               4                                     2   0         3
-//  2<5%%0<3 ADEVARAT                                  3                                  2   1         4
-
 void interclasare(int a[], int dimA, int b[], int dimB, int c[], int& dimC) {
 	int i = 0;
 	int j = 0;
 	
 	if (a[i] > b[j]) {
 		c[dimC] = b[j];
-		j++;
 
 	} else {
 		c[dimC] = a[i];
-		i++;
 	}
 
 	dimC++;

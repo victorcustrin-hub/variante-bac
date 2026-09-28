@@ -36,8 +36,8 @@ void sterge(int v[], int &n, int i, int j) {
 }
 
 void solutie4b() {
-	int n = 13;
-	int a[101] = { 12, 10, 10, 2, 2, 19, 9, 9, 9, 9, 15, 15, 15 };
+	int n = 12;
+	int a[101] = { 0, 10, 10, 2, 2, 19, 9, 9, 9, 9, 15, 15, 15 };
 
 	for (int i = 0;i < n;i++) {
 		if (a[i] == a[i + 1]) {

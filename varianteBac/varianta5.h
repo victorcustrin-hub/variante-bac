@@ -51,7 +51,7 @@ void solutie4() {
     }
 
     if (ct_prime == 0) {
-        cout << "nu exista numere prime";
+        cout << "NU EXISTA";
     }else {
         for (int i = 0; i < ct_prime - 1; i++) {
             for (int j = i + 1; j < ct_prime; j++) {

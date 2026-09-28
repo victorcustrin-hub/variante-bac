@@ -2,8 +2,10 @@
 #include <iostream>
 #include <cmath>
 using namespace std;
+//!! CODE REVIEW "include <iomainip>"
+//! cout<<fixed<<setprecision(3)<<medie;
 
-//??
+//de revizuit
 
 //SUBIECTUL III
 

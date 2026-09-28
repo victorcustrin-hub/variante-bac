@@ -110,5 +110,8 @@
     <ClInclude Include="varianta52.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="tema-exercitii-doi-indici.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

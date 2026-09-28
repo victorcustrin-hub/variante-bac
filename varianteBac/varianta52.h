@@ -3,8 +3,6 @@
 #include <cmath>
 using namespace std;
 
-
-
 //SUBIECTUL III
 
 //Subprogramul mult, cu doi parametri, primeşte prin intermediul primului parametru, n, un
@@ -34,7 +32,7 @@ void solutie3b() {
 	int d = 7;
 	int k = 0;
 
-	for (int i = 0;i < d;i++) {
+	for (int i = 0;i <= d;i++) {
 		if (mult(i, a)) {
 			k = i;
 		}

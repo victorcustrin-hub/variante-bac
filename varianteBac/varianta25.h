@@ -14,14 +14,28 @@ using namespace std;
 //cifrele pare reţinute în tabloul a sau valoarea - 1 dacă în tablou nu există nicio cifră pară.
 //Scrieţi definiţia completă a subprogramului f.
 
-int f(int a[], int n,int k) {
-	int p = 1;
-	k = 0;
+void f(int n, int a[], int& k) {
+    k = 0;
+    bool gasit = false;
 
-	for (int i = n-1;i >= 0;i--) {
-		if (a[i] % 2 == 0) {
-			
-		}
-	}
+    for (int i = n - 1; i >= 0; i--) {
+        if (a[i] % 2 == 0) {
+            k = k * 10 + a[i];
+            gasit = true;
+        }
+    }
+
+    if (gasit==false) {
+        k = -1;
+    }
+}
+
+void solutie() {
+    int a[100] = { 5,4,3,2 };
+    int d = 4;
+    int k = 0;
+
+    f(d, a, k);
+    cout << k << endl;
 
 }

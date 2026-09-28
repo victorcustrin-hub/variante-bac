@@ -3,7 +3,7 @@
 #include <cmath>
 using namespace std;
 
-//??
+//de revizuit
 
 //SUBIECTUL III
 
@@ -25,11 +25,6 @@ void nule(int a[], int n) {
             }
         }
     }
-
-    for (int i = 0;i < n;i++) {
-        cout << a[i] << " ";
-    }
-
 }
 
 void solutie3() {
@@ -37,5 +32,9 @@ void solutie3() {
     int n = 6;
 
     nule(a,n);
+
+    for (int i = 0;i < n;i++) {
+        cout << a[i] << " ";
+    }
 }
 
