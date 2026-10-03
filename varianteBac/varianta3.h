@@ -24,51 +24,58 @@ using namespace std;
 //n = 12272351 atunci se va afişa pe ecran numărul 0.
 
 int cif(int a, int b) {
-    int ct = 0;
+	int ct = 0;
 
-    if (a == 0 && b == 0) {
-        return 1;
-    }
+	if (a == 0 && b == 0) {
+		return 1;
+	}
 
-    while (a > 0) {
-        int cif = a % 10;
-        if (cif == b) {
-            ct++;
-        }
-        a = a / 10;
-    }
-    return ct;
+	while (a > 0) {
+		int cif = a % 10;
+		if (cif == b) {
+			ct++;
+		}
+		a = a / 10;
+	}
+	return ct;
 }
 
-//n=21523531
-//i<=9           0  1  2  3  4  5  6  7  8  9
-//9<=9 da        0      
-//1<=9 da           2
-//2<=9 da              2
-//3<=9 da                 2
-//4<=9 da                    0
-//5<=9 da                       2
-//6<=9 da                          0
-//7<=9 da                             0
-//8<=9 da                                0
-//9<=9 da                                   0
-//10<=9 nu
-
-//i>=0
 void solutie() {
-    int n = 21523531;
-    int fr[10];
-    int cif_impare = 0;
+	int nr = 21523531;
+	int aux = nr;
+	int f[100]{};
+	bool isPal = true;
+	while (aux != 0 && isPal){
+        int cifra = aux % 10;
+        f[cifra] = cif(nr, cifra);
+		
+		if (f[cifra] % 2 != 0) {
+			isPal = false;
+		}
 
-    for (int i = 0; i <= 9; i++) {
-        fr[i] = cif(n, i);
-        if (fr[i] % 2 != 0) {
-            cif_impare++;
-        }
-    }
+		aux = aux / 10;
+	}
 
-    if (cif_impare > 0) {
-        cout << 0 << endl;
-    }
-    //incomplet
+	int nou = 0;
+	int p = 1;
+	// 0 2 2 2 0 2
+	// 0 1 2 3 4 5 6 7 8 9
+
+	// 8*10000000 +8  50000005
+	if (isPal) {
+		int fata = 10000000;
+		int spate = 1;
+
+		for (int i = 9;i >= 0;i--) {
+			if (f[i] != 0) {
+				nou = nou + i * (fata + spate);
+				fata = fata / 10;
+				spate = spate * 10;
+			}
+		}
+		cout << nou << endl;
+	}
+	else {
+		cout << 0 << endl;
+	}
 }

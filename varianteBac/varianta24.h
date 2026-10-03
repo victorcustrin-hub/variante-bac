@@ -2,8 +2,7 @@
 #include <iostream>
 #include <cmath>
 using namespace std;
-//!! CODE REVIEW "include <iomainip>"
-//! cout<<fixed<<setprecision(3)<<medie;
+#include <iomanip>;
 
 //de revizuit
 
@@ -76,5 +75,5 @@ void solutie2b() {
     p(x, n, mini, maxi, sum);
     double medie = (double) sum / n;
     
-    cout << mini << ", " << maxi<<" ," << medie<<endl;
+    cout << fixed << setprecision(3) << mini << ", " << maxi<<" ," << medie<<endl;
 }

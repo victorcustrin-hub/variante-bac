@@ -169,6 +169,9 @@ void doarInA(int a[], int n, int b[], int m) {
 			}
 		}
 	}
+	if (vf == 0) {
+		cout << "NU EXISTA" << endl;
+	}
 }
 
 void solutie3() {
