@@ -16,6 +16,65 @@ using namespace std;
 //format dintr - un număr maxim de elemente care aparţin cel puţin unuia dintre tablouri, astfel
 //încât orice două elemente aflate pe poziţii consecutive să fie de paritate diferită.
 
+void sub(int a[], int n, int b[], int m) {
+	int i = 0;
+	int j = 0;
+	int ultim = 0;
+	bool vf_par = 0;
+
+
+	if (a[i] < b[j]) {
+		cout << a[i] << " ";
+		ultim = a[i];
+		i++;
+		vf_par = false;
+	}
+	else {
+		cout << b[j] << " ";
+		ultim = b[j];
+		j++;
+		vf_par = true;
+	}
+
+	while (i < n || j < m) {
+
+		if (vf_par) {
+
+			if (i < n && a[i] <= ultim) {
+				i++;
+			}
+
+			else if (i < n && a[i] > ultim) {
+				cout << a[i] << " ";
+				ultim = a[i];
+				i++;
+				vf_par = false;
+			}
+			else {
+				break;
+			}
+		}
+		else {
+			if (j < m && b[j] <= ultim) {
+				j++;
+			}
+			else if (j < m && b[j] > ultim) {
+				cout << b[j] << " ";
+				ultim = b[j];
+				j++;
+				vf_par = true;
+			}
+			else {
+				break;
+			}
+		}
+	}
+}
+//
+
+
+//VARIANTA ALTERNATIVA
+
 void sortare(int v[], int dim) {
 	bool sortat = true;
 

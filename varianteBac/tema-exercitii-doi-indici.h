@@ -423,6 +423,7 @@ int alKlea(int a[], int n, int b[], int m, int k) {
 		}
 		j++;
 	}
+	return -1;
 }
 
 void solutie7() {
