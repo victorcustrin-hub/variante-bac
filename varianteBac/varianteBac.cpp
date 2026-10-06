@@ -1,5 +1,5 @@
 #include <iostream>
-#include "varianta3.h"
+#include "varianta80.h"
 using namespace std;
 
 int main() {
