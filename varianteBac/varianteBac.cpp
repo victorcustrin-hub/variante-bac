@@ -1,7 +1,7 @@
 #include <iostream>
-#include "varianta80.h"
+#include "varianta5.h"
 using namespace std;
 
 int main() {
-	solutie();
+	solutie4();
 }

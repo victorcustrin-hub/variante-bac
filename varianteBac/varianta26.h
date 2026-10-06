@@ -6,6 +6,8 @@ using namespace std;
 
 //SUBIECTUL III
 
+//??
+
 //4.
 
 //a) Scrieţi definiţia completă a subprogramului sterge, care primeşte prin cei 4 parametri v, n, i, j:
