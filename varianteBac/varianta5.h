@@ -3,7 +3,7 @@
 #include <cmath>
 using namespace std;
 
-//??
+//?? de completat!!
 
 //SUBIECTUL III
 
@@ -33,15 +33,42 @@ int f(long a) {
 //Exemplu: pentru n = 7, şirul : 1125, 2, 314, 101, 37, 225, 12 pe ecran se va afişa :
 //2 37 101
 
+//functie de inserare pe poz
+void inserare(int v[], int& dim, int poz, int elem) {
+
+    for (int i = dim;i > poz;i--) {
+        v[i] = v[i + 1];
+    }
+    dim--;
+}
+
+//functie  poz de inserat
+int pozitie(int v[], int d,int elem) {
+    int poz = 0;
+    for (int i = 0;i < d;i++) {
+        if (elem > v[i]) {
+            poz = i;
+            break;
+        }
+    }
+    return poz;
+}
+
+int cautare(int x[], int n, int elem) {
+
+}
+
 void solutie4() {
     int v[100] = { 1125,2,314,101,37,224,12 };
     int n = 7;
-    int prime[100];
+    int prime[100]{};
+    int poz = 0;
 
 
     for (int i = 0;i < n;i++) {
         if (f(v[i]) == v[i]) {
-            cout << v[i]<<" ";
+            int poz = pozitie(v, n, v[i]);
+            inserare(v, n, poz, v[i]);
         }
     }
 
