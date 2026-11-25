@@ -16,5 +16,5 @@
 using namespace std;
 
 int main() {
-	solutie_var25_sIII_3();
+	solutie_var23_sIII_ex4();
 }

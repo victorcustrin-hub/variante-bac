@@ -144,24 +144,26 @@ void solutie_count() {
 	int n = 6;
 	cout << count(a, n);
 }
-//
-
-//var23,III ex4 ??
-void var23_sIII_ex4() {
-	
-
-}
+// [a,b] disj cu [c,d] <=>  c>b ||  a>
 
 void solutie_var23_sIII_ex4() {
 	int n = 4;
-	int a1 = 17;
-	int b1 = 20;
-	int a2 = 2;
-	int b2 = 6;
-	int a3 = 10;
-	int b3 = 15;
-	int a4 = 8;
-	int b4 = 16;
+	int a[100] = {17,2,10,8};
+	int b[100] = { 20,6,15,16 };
+
+	
+
+	for (int i = 0;i < n;i++) {
+		bool vf = true;
+		for (int j = 0;j < n && vf;j++) {
+			//a[i] b[i] cu a[j] b[j]
+			if(i!=j)
+			vf = a[i] > b[j] || b[i] < a[j];
+		}
+		if (vf) {
+			cout << a[i] << " " << b[i] << endl;
+		}
+	}
 }
 //
 
