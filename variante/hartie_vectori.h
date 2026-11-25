@@ -52,7 +52,6 @@ void var40_subIII_ex2() {
 //
 
 //
-
 void mutaLaFinal(int a[], int d,int poz) {
 	int aux = a[poz];
 
